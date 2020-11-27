@@ -15,6 +15,7 @@ const df = {
 function onClone(st) {
     this.name = 'planet' + (++planets)
     augment(this, df, st)
+    if (!this.image) this.image = res.planets['feoll-v']
 }
 
 function evo(dt) {
@@ -49,7 +50,7 @@ function draw() {
     translate(x, y)
     rotate(angle)
 
-    image(res.planet, -r, -r, 2*r, 2*r)
+    image(this.image, -r, -r, 2*r, 2*r)
 
     restore()
 }

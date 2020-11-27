@@ -8,6 +8,7 @@ function click(e) {
         dx: cos(angle),
         dy: sin(angle),
         speed: RND(100, 500),
-        rspeed: .25 + rnd(.75 * PI) * lib.math.rnds(),
+        rspeed: (.25 + rnd(.75)) * PI * lib.math.rnds(),
+        image: lib.math.rnde( res.planets._ls ),
     })
 }
